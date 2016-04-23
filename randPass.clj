@@ -1,10 +1,5 @@
 ;; randPass
 
-(def length (do
-                    (print "How many characters should your password be?")
-                    (flush)
-                    (read-line)))
-
 (def n
     (read-string
         (do
@@ -14,7 +9,7 @@
 
 (def password
   (apply str
-    (take 40
+    (take 42
       (shuffle (concat
                    (map char (range 48 58))
                    (map char (range 66 91))
@@ -23,12 +18,3 @@
 
 
 (println password)
-
-
-
-
-
-   ;(def length (do (print "How many characters should your password be? ") (flush) (read-line)))
-
-   (concat
-        (seq "!@#$%^&*(){}[]/~|/?<>]")
